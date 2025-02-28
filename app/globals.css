@@ -5,12 +5,10 @@
 .gradient {
   background: linear-gradient(
     150deg,
-    rgb(240, 239, 239) 50%,
-    rgb(240, 239, 239) 50%
+    rgb(255, 255, 255) 50%,
+    rgb(255, 255, 255) 50%
   );
-  -webkit-box-shadow: -1px 4px 19px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 4px 19px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 4px 19px -4px rgba(0, 0, 0, 0.75);
+  border: 2px solid rgba(204, 204, 204, 0.75);
 }
 
 .message img {

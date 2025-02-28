@@ -1,0 +1,9 @@
+.own-message {
+  background-color: rgb(128, 213, 252);
+  color: white;
+}
+
+.other-message {
+  background-color: rgb(168, 168, 168);
+  color: white;
+}
