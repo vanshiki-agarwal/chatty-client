@@ -7,3 +7,15 @@
   background-color: rgb(168, 168, 168);
   color: white;
 }
+.user-icon {
+  background-color: #0d6efd;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.new-user {
+  margin-right: 20px;
+}

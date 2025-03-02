@@ -1,4 +1,4 @@
-import new_user from "./new_user.svg";
+import new_user from "./new_user.png";
 import send from "./send.png";
 import upload from "./upload.png";
 

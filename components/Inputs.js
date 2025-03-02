@@ -8,6 +8,7 @@ const Inputs = ({ setChat, user, socket }) => {
     if (input) {
       const msg = { content: input, type: "text", user };
       socket.emit("send_message", msg);
+      socket.emit("user_typing", { user: user.user, typing: false });
       setChat((prev) => [...prev, msg]);
       setInput("");
     } else {
@@ -17,12 +18,20 @@ const Inputs = ({ setChat, user, socket }) => {
 
   const userTyping = (e) => {
     setInput(e);
+    socket.emit("user_typing", {
+      user: user.user,
+      typing: e ? true : false,
+    });
   };
 
   const handleImageUpload = (e) => {
-    console.log(e);
     const file = e.target.files[0];
-    console.log(file);
+    if (file.type === "image/jpeg" || file.type === "image/png") {
+      const img = URL.createObjectURL(file);
+      const msg = { content: img, type: "image", user };
+      setChat((prev) => [...prev, msg]);
+      socket.emit("send_message", msg);
+    }
   };
 
   return (
